@@ -13,8 +13,7 @@ jupyter:
     name: python3
 ---
 
-# Name(s)
-**PUT YOUR FULL NAME(S) HERE**
+# Daniel Li
 
 
 **Instructions:** This is an individual assignment, but you may discuss your code with your neighbors.
@@ -36,7 +35,9 @@ Please read and reference the following as your progress through this course.
 **In the space provided below, what are three things that still remain unclear or need further explanation?**
 
 
-**YOUR ANSWER HERE**
+1. How do I input mathematical symbols?
+2. How do I unsync a notebook from a MD file?
+3. Why is there no Java kernel?
 
 
 ## Exercises 1-7
@@ -46,29 +47,39 @@ For the following exercises please read the Python appendix in the Marsland text
 ## Exercise 1
 
 ```python
-# YOUR SOLUTION HERE
-#a=1000
-print('this is my answer',a+1) 
+import numpy as np
+```
+
+```python
+a = np.empty((6,4),dtype=np.int)
+a.fill(2)
+a
 ```
 
 ## Exercise 2
 
 ```python
-# YOUR SOLUTION HERE
-a=2000
+b= np.empty((6,4),dtype=np.int)
+b.fill(2)
+np.fill_diagonal(b, 3)
+b
 ```
 
 ## Exercise 3
 
-```python
-# YOUR SOLUTION HERE
-```
+
+So a*b works because we multiple each element by its corresponding partner in the other matrix. Like mulitplying by a constant. But np.dot(a,b) doesn't work because it actually tries to do matrix multiplication. For a mxn to multiply it needs to match the dimensions, so there must be n rows in the second matrix.
+
 
 ## Exercise 4
 
 ```python
-# YOUR SOLUTION HERE
+print(np.dot(a.transpose(),b))
+print(np.dot(a,b.transpose()))
 ```
+
+
+
 
 ## Exercise 5
 
